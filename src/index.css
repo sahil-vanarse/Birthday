@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50 min-h-screen text-gray-800;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-400 text-gray-900 hover:bg-accent-500 focus:ring-accent-400;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-lg overflow-hidden;
+  }
+
+  .section {
+    @apply py-12 px-4 md:px-6 max-w-7xl mx-auto;
+  }
+
+  .heading-primary {
+    @apply font-script text-4xl md:text-5xl lg:text-6xl text-primary-600 mb-4 text-center;
+  }
+
+  .heading-secondary {
+    @apply font-script text-2xl md:text-3xl lg:text-4xl text-secondary-600 mb-3;
+  }
+}
+
+/* Animation utilities */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-slower {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Staggered animation delay utilities */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
